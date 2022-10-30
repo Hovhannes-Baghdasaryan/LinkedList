@@ -65,6 +65,17 @@ class LinkedList:
 
         print(f"head {self.head.value}", f"tail {self.tail.value}")
 
+    def displayBackwardList(self):
+        if self.head == self.tail is None:
+            return
+
+        current = self.tail
+        while current is not None:
+            print(current.value)
+            current = current.prev
+
+        print(f"tail {self.tail.value}", f"head {self.head.value}")
+
     def reverseLinkedList(self):
         # a -> b -> c -> None
         # b -> a -> None
@@ -90,6 +101,6 @@ list.pushBack(node1)
 list.pushBack(node2)
 list.pushBack(node3)
 
-list.reverseLinkedList()
+# list.reverseLinkedList()
 
-list.displayList()
+list.displayBackwardList()
